@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Snake Game</title>
+    
+</head>
+<body>
+    <h1>Welcome to GestureSnake</h1>
+    <audio id="music" src="Gesture-SnakeMusic.mp3" autoplay loop></audio>
+    <button id="mute-button">MUTE</button>
+    <button onclick="window.location.href = 'http://localhost:51765/Models/HtmlPage1.html'">Start Game</button>
+    <script>
+        var audioElement = document.getElementById('music');
+        var muteButton = document.getElementById('mute-button');
+
+        // Toggle the mute state of the audio element when the mute button is clicked
+        muteButton.addEventListener('click', function () {
+            if (audioElement.muted) {
+                audioElement.muted = false;
+                muteButton.textContent = 'Mute';
+            } else {
+                audioElement.muted = true;
+                muteButton.textContent = 'Unmute';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
